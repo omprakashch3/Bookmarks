@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 module.exports.responseOnSucess = (payload, msg, res) => {
   let response = {
     data: payload,
@@ -15,4 +17,8 @@ module.exports.responseOnFailure = (payload, msg, res) => {
     error: msg,
   };
   res.send(response);
+};
+
+module.exports.defeultResponseOnServer = (req, res) => {
+  this.responseOnSucess({}, "server is running successfully", res);
 };
