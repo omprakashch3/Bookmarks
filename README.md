@@ -18,7 +18,7 @@ Content-Type: application/json
   "link":"https://github.co.in/",
   "title":"github",
   "publisher":"ompraksh",
-  "tag":"edu"
+  "tag":["edu","politics"]
 }
 ```
 
