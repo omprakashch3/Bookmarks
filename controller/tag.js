@@ -2,6 +2,12 @@ const model = require("../model");
 const util = require("../utils");
 const ObjectId = require("mongodb").ObjectID;
 
+/**
+ *
+ * @param {*} req This parameter holds request object that the server recieves from client
+ * @param {*} res This parameter holds the response object using which the server responds to the client.
+ * @description This method has been created to handle the creation of tags document in *Tags* collection
+ */
 module.exports.createTag = async (req, res) => {
   let options = req.headers.options;
   const { title } = req.body;
@@ -25,6 +31,12 @@ module.exports.createTag = async (req, res) => {
     }
   }
 };
+/**
+ *
+ * @param {*} req This parameter holds request object that the server recieves from client
+ * @param {*} res This parameter holds the response object using which the server responds to the client.
+ * @description This method has been created to handle the Removal of tags from the selected bookmark.
+ * */
 
 module.exports.deleteTag = async (req, res) => {
   let options = req.headers.options;
@@ -40,6 +52,12 @@ module.exports.deleteTag = async (req, res) => {
     util.responseOnFailure({}, err, res);
   }
 };
+/**
+ *
+ * @param {*} req This parameter holds request object that the server recieves from client
+ * @param {*} res This parameter holds the response object using which the server responds to the client.
+ * @description This method has been created to fetch all tags from database
+ */
 
 module.exports.gatAllTag = async (req, res) => {
   try {

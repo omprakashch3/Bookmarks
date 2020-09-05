@@ -38,6 +38,12 @@ module.exports.createBookmark = async (req, res) => {
     }
   }
 };
+/**
+ *
+ * @param {*} req This parameter holds request object that the server recieves from client
+ * @param {*} res This parameter holds the response object using which the server responds to the client.
+ * @description This method has been created to handle the deletion of selected bookmark
+ */
 
 module.exports.deleteBookmark = async (req, res) => {
   let options = req.headers.options;
@@ -49,6 +55,12 @@ module.exports.deleteBookmark = async (req, res) => {
     util.responseOnFailure({}, err, res);
   }
 };
+/**
+ *
+ * @param {*} req This parameter holds request object that the server recieves from client
+ * @param {*} res This parameter holds the response object using which the server responds to the client.
+ * @description This method has been created to add tags on given bookmarks.
+ */
 module.exports.addTag = async (req, res) => {
   let options = req.headers.options;
   const { tag } = req.body;
@@ -65,6 +77,12 @@ module.exports.addTag = async (req, res) => {
     util.responseOnFailure({}, err, res);
   }
 };
+/**
+ *
+ * @param {*} req This parameter holds request object that the server recieves from client
+ * @param {*} res This parameter holds the response object using which the server responds to the client.
+ * @description This method has been created to Remove tags from the selected bookmark.
+ */
 module.exports.removeTag = async (req, res) => {
   let options = req.headers.options;
   const { tag } = req.body;
@@ -81,6 +99,12 @@ module.exports.removeTag = async (req, res) => {
     util.responseOnFailure({}, err, res);
   }
 };
+/**
+ *
+ * @param {*} req This parameter holds request object that the server recieves from client
+ * @param {*} res This parameter holds the response object using which the server responds to the client.
+ * @description this method has been created to fetch all the bookmarks from *bookmarks* collection.
+ * */
 module.exports.getAllBookmarks = async (req, res) => {
   try {
     let options = req.headers.options;

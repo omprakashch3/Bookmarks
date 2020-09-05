@@ -1,4 +1,10 @@
 const mongodb = require("mongodb");
+
+/**
+ * @description This method has been created to establish the connection between application & the database
+ * @implements This methods implements the indexing of link & title key in bookmarks & Tags collection respectively.
+ * @implements Here the unique key constraint has been applied on the link & title attribut in bookmarks & Tags collection respectively
+ */
 module.exports.connect = async () => {
   try {
     let db = await mongodb.MongoClient.connect(process.env.DB, {
@@ -17,7 +23,6 @@ module.exports.connect = async () => {
 
     return db.db("test");
   } catch (err) {
-    console.error(err);
     return err;
   }
 };
