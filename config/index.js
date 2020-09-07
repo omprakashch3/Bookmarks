@@ -20,6 +20,7 @@ module.exports.connect = async () => {
       .db("test")
       .collection("Tags")
       .createIndex({ title: 1 }, { unique: true });
+    // console.log(db.db("test"));
 
     return db.db("test");
   } catch (err) {
