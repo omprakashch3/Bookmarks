@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 module.exports.responseOnSucess = (payload, msg, res) => {
   let response = {
     data: payload,
